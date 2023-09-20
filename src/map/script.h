@@ -599,6 +599,7 @@ enum script_hominfo_types {
 	HOMINFO_HUNGRY,
 	HOMINFO_RENAME,
 	HOMINFO_LEVEL,
+	HOMINFO_GID,
 	HOMINFO_MAX
 };
 

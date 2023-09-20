@@ -7046,6 +7046,7 @@ This function works as a direct counterpart of 'getpetinfo':
 	HOMINFO_HUNGRY   - Hungry level. 100 is completely full.
 	HOMINFO_RENAME   - Rename flag. 0 means this homunculus has not been named yet.
 	HOMINFO_LEVEL    - Homunculus level
+	HOMINFO_GID      - Homunculus GID
 
 If the attached player doesn't own a homunculus, this command will return
 "null" for type HOMINFO_NAME, and return 0 for other types.

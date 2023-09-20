@@ -17436,6 +17436,7 @@ static BUILDIN(getpetinfo)
  * n -> 0:hom_id 1:class 2:name
  * 3:friendly 4:hungry, 5: rename flag.
  * 6: level
+ * 7: Hom GID
  *------------------------------------------*/
 static BUILDIN(gethominfo)
 {
@@ -17471,6 +17472,9 @@ static BUILDIN(gethominfo)
 		break;
 	case HOMINFO_LEVEL:
 		script_pushint(st, sd->hd->homunculus.level);
+		break;
+	case HOMINFO_GID:
+		script_pushint(st, sd->hd->bl.id);
 		break;
 	default:
 		script_pushint(st, 0);
@@ -30030,6 +30034,7 @@ static void script_hardcoded_constants(void)
 	script->set_constant("HOMINFO_HUNGRY", HOMINFO_HUNGRY, false, false);
 	script->set_constant("HOMINFO_RENAME", HOMINFO_RENAME, false, false);
 	script->set_constant("HOMINFO_LEVEL", HOMINFO_LEVEL, false, false);
+	script->set_constant("HOMINFO_GID", HOMINFO_GID, false, false);
 
 	script->constdb_comment("Renewal");
 #ifdef RENEWAL
